@@ -19,3 +19,5 @@ end
 local disk = GetPartFromPort(1, Disk)
 local ip = makeip(6)
 print(ip)
+disk:Write("ip", ip)
+print(disk:Read("ip"))
