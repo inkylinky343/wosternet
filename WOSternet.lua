@@ -18,6 +18,7 @@ end
 
 local disk = GetPartFromPort(1, "Disk")
 local ip = makeip(6)
-print(ip)
-disk:Write("ip", ip)
+if disk.ip == nil then
+    disk:Write("ip", ip)
+end
 print(disk.ip)
