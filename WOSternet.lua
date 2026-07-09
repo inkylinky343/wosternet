@@ -16,7 +16,7 @@ function makeip(k)
     return string.char(table.unpack(pw))
 end
 
-local disk = GetPartFromPort(1, Disk)
+local disk = GetPartFromPort(1, "Disk")
 local ip = makeip(6)
 print(ip)
 disk:Write("ip", ip)
