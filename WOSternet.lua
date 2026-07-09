@@ -19,7 +19,7 @@ end
 local disk = assert(GetPartFromPort(2, "Disk"),"Insert Disk to Run.")
 local ip = makeip(6)
 local a = disk:ReadAll()
-if disk.ip == nil then
+if a.ip == nil then
     disk:Write("ip", ip)
 end
 print(a.ip)
