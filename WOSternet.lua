@@ -1,5 +1,5 @@
 local modem = GetPartFromPort(1, "Modem")
 local mc = GetPartFromPort(2, "Microcontroller")
-code = modem:GetAsync("https://raw.githubusercontent.com/inkylinky343/wosternet/refs/heads/main/WOSternet.lua", true, nil)
+local code = modem:GetAsync("https://raw.githubusercontent.com/inkylinky343/wosternet/refs/heads/main/WOSternet.lua", true, nil)
 print(code)
 mc:Configure({Code=code})
