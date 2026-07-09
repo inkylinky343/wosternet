@@ -18,7 +18,8 @@ end
 -- make and assign ip (you can change your ip by replacing the disk for now)
 local disk = assert(GetPartFromPort(2, "Disk"),"Insert Disk to Run.")
 local ip = makeip(6)
+local a = disk:ReadAll()
 if disk.ip == nil then
     disk:Write("ip", ip)
 end
-print(disk.ip)
+print(a.ip)
