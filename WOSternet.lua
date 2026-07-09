@@ -24,4 +24,3 @@ if a.ip == nil then
     disk:Write("ip", ip)
 end
 print(a.ip)
-print(OnClicker())
