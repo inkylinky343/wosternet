@@ -17,7 +17,7 @@ function makeip(k)
 end
 
 -- make and assign ip (you can change your ip by replacing the disk for now)
-local disk = assert(GetPartFromPort(2, "Disk"),"Insert Disk to Run.")
+local disk = assert(GetPartFromPort(1, "Disk"),"Insert Disk to Run.")
 local ip = makeip(6)
 local a = disk:ReadAll()
 if a.ip == nil then
