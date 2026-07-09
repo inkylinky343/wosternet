@@ -3,7 +3,6 @@ local modem = GetPartFromPort(1, "Modem")
 local mc = GetPartFromPort(1, "Microcontroller")
 local code = modem:GetAsync("https://raw.githubusercontent.com/inkylinky343/wosternet/refs/heads/main/WOSternet.lua", true, nil)
 print(code)
-mc:Configure({Code=code})
 -- borrowed code from stack overflow for generating random strings
 function makeip(k)
     local alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
