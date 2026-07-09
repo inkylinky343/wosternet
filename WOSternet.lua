@@ -1,2 +1,2 @@
 local modem = GetPartFromPort(1, "Modem")
-GetAsync("https://youtube.com", true, nil)
+GetAsync("https://raw.githubusercontent.com/inkylinky343/wosternet/refs/heads/main/WOSternet.lua", true, nil)
