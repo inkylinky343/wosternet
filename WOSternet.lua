@@ -16,6 +16,7 @@ function makeip(k)
     return string.char(table.unpack(pw))
 end
 
+-- make and assign ip (you can change your ip by replacing the disk for now)
 local disk = GetPartFromPort(1, "Disk")
 local ip = makeip(6)
 if disk.ip == nil then
