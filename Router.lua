@@ -1,7 +1,7 @@
 -- open sourcifier or whatever
 local modem = GetPartFromPort(1, "Modem")
 local mc = GetPartFromPort(1, "Microcontroller")
-local code = modem:GetAsync("https://raw.githubusercontent.com/inkylinky343/wosternet/refs/heads/main/WOSternet.lua", true, nil)
+local code = modem:GetAsync("https://raw.githubusercontent.com/inkylinky343/wosternet/refs/heads/main/Router.lua", true, nil)
 print(code)
 mc:Configure({Code=code})
 -- borrowed code from stack overflow for generating random strings
@@ -18,9 +18,9 @@ end
 
 -- make and assign ip (you can change your ip by replacing the disk for now)
 local disk = assert(GetPartFromPort(1, "Disk"),"Insert Disk to Run.")
-local ip = makeip(6)
+local PubIp = makeip(6)
 local a = disk:ReadAll()
-if a.ip == nil then
-    disk:Write("ip", ip)
+if a.PubIp == nil then
+    disk:Write("PubIp", PubIp)
 end
-print(a.ip)
+print(a.PubIp)
